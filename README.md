@@ -10,7 +10,7 @@ Requires **Apple Silicon** and **macOS 14 or later**. Liquid Glass is available 
 brew install --cask usamabinshahid97/tap/cmf-companion
 ```
 
-Homebrew adds this tap automatically. If Homebrew asks whether to trust this community cask, review [the cask](Casks/cmf-companion.rb) and confirm if you trust it. You can also add the tap explicitly with `brew tap usamabinshahid97/tap`, then install with `brew install --cask cmf-companion`.
+Homebrew adds this tap automatically. If Homebrew asks whether to trust this community cask, review [the cask](Casks/cmf-companion.rb) and confirm if you trust it.
 
 ## First launch
 
@@ -41,7 +41,7 @@ To remove the app's preferences too, use `brew uninstall --cask --zap cmf-compan
 
 ## Maintenance
 
-For each new release, update `version` and the SHA-256 of its published ZIP in `Casks/cmf-companion.rb`. Keep published version archives immutable. The URL and livecheck follow [the app's GitHub releases](https://github.com/usamabinshahid97/cmf-companion/releases).
+For each new release, update `version` and the SHA-256 of its published ZIP in `Casks/cmf-companion.rb`, then copy that exact cask to the [compatibility tap](https://github.com/usamabinshahid97/homebrew-cmf-companion) so existing installation links receive the same updates. Keep published version archives immutable. The URL and livecheck follow [the app's GitHub releases](https://github.com/usamabinshahid97/cmf-companion/releases).
 
 ```sh
 brew style --cask usamabinshahid97/tap/cmf-companion
