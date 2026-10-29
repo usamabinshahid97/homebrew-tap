@@ -1,16 +1,16 @@
 # CMF Companion for Homebrew
 
-[![Cask checks](https://github.com/usamabinshahid97/homebrew-cmf-companion/actions/workflows/cask.yml/badge.svg)](https://github.com/usamabinshahid97/homebrew-cmf-companion/actions/workflows/cask.yml)
+[![Cask checks](https://github.com/usamabinshahid97/homebrew-tap/actions/workflows/cask.yml/badge.svg)](https://github.com/usamabinshahid97/homebrew-tap/actions/workflows/cask.yml)
 
 Install [CMF Companion](https://github.com/usamabinshahid97/cmf-companion), an unofficial native macOS menu bar app for **CMF Buds 2 (B179)**.
 
 Requires **Apple Silicon** and **macOS 14 or later**. Liquid Glass is available on macOS 26+; macOS 14–15 use a material fallback. Intel Macs and other earbud models are not supported by this binary.
 
 ```sh
-brew install --cask usamabinshahid97/cmf-companion/cmf-companion
+brew install --cask usamabinshahid97/tap/cmf-companion
 ```
 
-Homebrew adds this tap automatically. If Homebrew asks whether to trust this community cask, review [the cask](Casks/cmf-companion.rb) and confirm if you trust it. You can also add the tap explicitly with `brew tap usamabinshahid97/cmf-companion`, then install with `brew install --cask cmf-companion`.
+Homebrew adds this tap automatically. If Homebrew asks whether to trust this community cask, review [the cask](Casks/cmf-companion.rb) and confirm if you trust it. You can also add the tap explicitly with `brew tap usamabinshahid97/tap`, then install with `brew install --cask cmf-companion`.
 
 ## First launch
 
@@ -26,7 +26,7 @@ Quit CMF Companion from its More menu, then run:
 
 ```sh
 brew update
-brew upgrade --cask usamabinshahid97/cmf-companion/cmf-companion
+brew upgrade --cask usamabinshahid97/tap/cmf-companion
 ```
 
 ## Uninstall
@@ -44,8 +44,8 @@ To remove the app's preferences too, use `brew uninstall --cask --zap cmf-compan
 For each new release, update `version` and the SHA-256 of its published ZIP in `Casks/cmf-companion.rb`. Keep published version archives immutable. The URL and livecheck follow [the app's GitHub releases](https://github.com/usamabinshahid97/cmf-companion/releases).
 
 ```sh
-brew style --cask usamabinshahid97/cmf-companion/cmf-companion
-brew audit --cask --strict --online usamabinshahid97/cmf-companion/cmf-companion
+brew style --cask usamabinshahid97/tap/cmf-companion
+brew audit --cask --strict --online usamabinshahid97/tap/cmf-companion
 ```
 
 Full release instructions and source are in the [app repository](https://github.com/usamabinshahid97/cmf-companion/blob/main/DISTRIBUTION.md). The app and this tap use AGPL-3.0; see [LICENSE](LICENSE).

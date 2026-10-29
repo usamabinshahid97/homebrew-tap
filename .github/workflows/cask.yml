@@ -31,18 +31,18 @@ jobs:
         run: |
           test "$(uname -m)" = arm64
           brew update
-          brew tap usamabinshahid97/cmf-companion "$GITHUB_WORKSPACE"
+          brew tap usamabinshahid97/tap "$GITHUB_WORKSPACE"
           if brew commands | grep -qx trust; then
-            brew trust --cask usamabinshahid97/cmf-companion/cmf-companion
+            brew trust --cask usamabinshahid97/tap/cmf-companion
           fi
       - name: Style
-        run: brew style --cask usamabinshahid97/cmf-companion/cmf-companion
+        run: brew style --cask usamabinshahid97/tap/cmf-companion
       - name: Audit
-        run: brew audit --cask --strict --online usamabinshahid97/cmf-companion/cmf-companion
+        run: brew audit --cask --strict --online usamabinshahid97/tap/cmf-companion
       - name: Install, verify, and uninstall
         run: |
           mkdir -p "$RUNNER_TEMP/cmf-apps"
-          brew install --yes --cask --appdir="$RUNNER_TEMP/cmf-apps" usamabinshahid97/cmf-companion/cmf-companion
+          brew install --yes --cask --appdir="$RUNNER_TEMP/cmf-apps" usamabinshahid97/tap/cmf-companion
           codesign --verify --deep --strict "$RUNNER_TEMP/cmf-apps/CMF Companion.app"
           xattr -p com.apple.quarantine "$RUNNER_TEMP/cmf-apps/CMF Companion.app"
           brew uninstall --cask cmf-companion
